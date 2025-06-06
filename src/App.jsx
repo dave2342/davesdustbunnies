@@ -83,7 +83,7 @@ export default function App() {
         </>
       )}
 
-      {page === "contact" ** <p>codx ghix work</p>}
+      {page === "contact" && <p>codx ghix work</p>}
 
       {/* Footer / Contact */}
       <footer className="bg-blue-900 text-white py-6">
