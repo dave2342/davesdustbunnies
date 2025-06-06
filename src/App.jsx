@@ -18,7 +18,11 @@ export default function App() {
       {/* Header */}
       <header className="bg-blue-900 text-white p-6 shadow-md">
         <div className="max-w-5xl mx-auto flex justify-between items-center">
-          <h1 className="text-3xl font-bold" onClick={showHome}>
+          <h1
+            className="text-3xl font-bold"
+            hover:cursor-pointer
+            onClick={showHome}
+          >
             Dave’s Dust Bunnies
           </h1>
           <button
@@ -89,31 +93,22 @@ export default function App() {
       )}
 
       {page === "contact" && (
-        <section>
-          <h2>Get In Touch!</h2>
-          <p>Call or text: (774) 253-5853</p>
-          <p>Email: DavesDustBunnies@gmail.com</p>
-        </section>
+        <footer className="bg-blue-900 text-white py-6">
+          <div className="max-w-5xl mx-auto text-center">
+            <p className="mb-2">📞 Call or text: (774) 253-5853</p>
+            <p>
+              📧 Email:{" "}
+              <a href="mailto:davesdustbunnies@gmail.com" className="underline">
+                DavesDustBunnies@gmail.com
+              </a>
+            </p>
+            <p className="mt-4 text-sm text-gray-300">
+              © {new Date().getFullYear()} Dave’s Dust Bunnies. All rights
+              reserved.
+            </p>
+          </div>
+        </footer>
       )}
-
-      {/* Footer / Contact */}
-      <footer className="bg-blue-900 text-white py-6">
-        <div className="max-w-5xl mx-auto text-center">
-          <p className="mb-2">📞 Call or text: (774) 253-5853</p>
-          <p>
-            📧 Email:{" "}
-            <a href="mailto:davesdustbunnies@gmail.com" className="underline">
-              DavesDustBunnies@gmail.com
-            </a>
-          </p>
-          <p className="mt-4 text-sm text-gray-300">
-            © {new Date().getFullYear()} Dave’s Dust Bunnies. All rights
-            reserved.
-          </p>
-        </div>
-      </footer>
-      {/* </>
-      )} */}
     </div>
   );
 }
