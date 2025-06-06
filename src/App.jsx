@@ -17,7 +17,9 @@ export default function App() {
       {/* Header */}
       <header className="bg-blue-900 text-white p-6 shadow-md">
         <div className="max-w-5xl mx-auto flex justify-between items-center">
-          <h1 className="text-3xl font-bold">Dave’s Dust Bunnies</h1>
+          <h1 className="text-3xl font-bold" onClick={showHome}>
+            Dave’s Dust Bunnies
+          </h1>
           <button
             className="bg-white text-blue-900 font-semibold px-4 py-2 rounded hover:bg-blue-100"
             onClick={showContact}
@@ -83,7 +85,13 @@ export default function App() {
         </>
       )}
 
-      {page === "contact" && <p>codx ghix work</p>}
+      {page === "contact" && (
+        <section>
+          <h2>Get In Touch!</h2>
+          <p>Call or text: (774) 253-5853</p>
+          <p>Email: DavesDustBunnies@gmail.com</p>
+        </section>
+      )}
 
       {/* Footer / Contact */}
       <footer className="bg-blue-900 text-white py-6">
