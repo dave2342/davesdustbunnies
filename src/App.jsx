@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./App.css";
+import { Analytics } from "@vercel/analytics/next";
 
 export default function App() {
   const [page, setPage] = useState("home");
