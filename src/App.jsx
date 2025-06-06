@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./App.css";
-import { Analytics } from "@vercel/analytics/next";
+import { Analytics } from "@vercel/analytics/react";
 
 export default function App() {
   const [page, setPage] = useState("home");
@@ -32,6 +32,8 @@ export default function App() {
 
       {page === "home" && (
         <>
+          <Analytics />
+
           {/* Hero Section */}
           <section className="bg-blue-100 py-20 px-4 text-center">
             <h2 className="text-4xl font-bold mb-4">
