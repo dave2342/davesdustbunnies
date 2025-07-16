@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./App.css";
 import { Analytics } from "@vercel/analytics/react";
+import ContactForm from "./components/ContactForm";
 
 export default function App() {
   const [page, setPage] = useState("home");
@@ -18,11 +19,7 @@ export default function App() {
       {/* Header */}
       <header className="bg-blue-900 text-white p-6 shadow-md">
         <div className="max-w-5xl mx-auto flex justify-between items-center">
-          <h1
-            className="text-3xl font-bold"
-            hover:cursor-pointer
-            onClick={showHome}
-          >
+          <h1 className="text-3xl font-bold cursor-pointer" onClick={showHome}>
             Dave’s Dust Bunnies
           </h1>
           <button
@@ -45,7 +42,7 @@ export default function App() {
             </h2>
             <p className="text-lg max-w-xl mx-auto">
               Friendly, affordable cleaning services you can count on. Serving
-              Leicester, MA and nearby areas.
+              Central MA and nearby areas.
             </p>
           </section>
 
@@ -58,7 +55,7 @@ export default function App() {
                   🏠 Standard House Cleaning
                 </h4>
                 <p>
-                  Dusting, sweeping, mopping, bathrooms, kitchens — everything
+                  Dusting, sweeping, mopping, bathrooms, kitchens. Everything
                   you expect from a pro clean.
                 </p>
               </li>
@@ -83,8 +80,7 @@ export default function App() {
                   🧴 Add-On Services
                 </h4>
                 <p>
-                  Oven cleaning, fridge cleaning, inside windows, and more —
-                  just ask!
+                  Oven cleaning, fridge cleaning, windows, and more - just ask!
                 </p>
               </li>
             </ul>
@@ -93,21 +89,27 @@ export default function App() {
       )}
 
       {page === "contact" && (
-        <footer className="bg-blue-900 text-white py-6">
-          <div className="max-w-5xl mx-auto text-center">
-            <p className="mb-2">📞 Call or text: (774) 253-5853</p>
-            <p>
-              📧 Email:{" "}
-              <a href="mailto:davesdustbunnies@gmail.com" className="underline">
-                DavesDustBunnies@gmail.com
-              </a>
-            </p>
-            <p className="mt-4 text-sm text-gray-300">
-              © {new Date().getFullYear()} Dave’s Dust Bunnies. All rights
-              reserved.
-            </p>
-          </div>
-        </footer>
+        <div>
+          <ContactForm />
+          <footer className="bg-blue-900 text-white py-6">
+            <div className="max-w-5xl mx-auto text-center">
+              <p className="mb-2">📞 Call or text: (774) 253-5853</p>
+              <p>
+                📧 Email:{" "}
+                <a
+                  href="mailto:davesdustbunnies@gmail.com"
+                  className="underline"
+                >
+                  DavesDustBunnies@gmail.com
+                </a>
+              </p>
+              <p className="mt-4 text-sm text-gray-300">
+                © {new Date().getFullYear()} Dave’s Dust Bunnies. All rights
+                reserved.
+              </p>
+            </div>
+          </footer>
+        </div>
       )}
     </div>
   );
