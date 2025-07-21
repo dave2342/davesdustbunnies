@@ -2,6 +2,7 @@ import { useState } from "react";
 import "./App.css";
 import { Analytics } from "@vercel/analytics/react";
 import ContactForm from "./components/ContactForm";
+import dustbunny from "./assets/dustbunny.png";
 
 export default function App() {
   const [page, setPage] = useState("home");
@@ -19,9 +20,22 @@ export default function App() {
       {/* Header */}
       <header className="bg-blue-900 text-white p-6 shadow-md">
         <div className="max-w-5xl mx-auto flex justify-between items-center">
-          <h1 className="text-3xl font-bold cursor-pointer" onClick={showHome}>
-            Dave’s Dust Bunnies
-          </h1>
+          <div className="flex items-center">
+            <img
+              src={dustbunny}
+              alt="Logo Dust Bunny"
+              className="w-24 h-22 cursor-pointer"
+              onClick={showHome}
+            />
+
+            <h1
+              className="text-5xl font-poppins cursor-pointer transition-colors"
+              onClick={showHome}
+            >
+              Dave’s Dust Bunnies
+            </h1>
+          </div>
+
           <button
             className="bg-white text-blue-900 font-semibold px-4 py-2 rounded hover:bg-blue-100"
             onClick={showContact}
@@ -54,10 +68,19 @@ export default function App() {
                 <h4 className="font-semibold text-lg mb-2">
                   🏠 Standard House Cleaning
                 </h4>
-                <p>
-                  Dusting, sweeping, mopping, bathrooms, kitchens. Everything
-                  you expect from a pro clean.
-                </p>
+                <ul className="list-disc list-inside text-sm text-gray-700">
+                  <li>Dusting (high and low, including baseboards)</li>
+                  <li>Vacuuming and mopping all floors</li>
+                  <li>
+                    Kitchen (counters, sink, fronts of cabinets and appliances,
+                    inside microwave)
+                  </li>
+                  <li>
+                    Bathroom (counters, mirror, sink, toilet, tub, shower,
+                    fronts of cabinets)
+                  </li>
+                  <li>Emptying trash bins</li>
+                </ul>
               </li>
               <li className="bg-gray-100 p-6 rounded shadow">
                 <h4 className="font-semibold text-lg mb-2">🧹 Deep Cleaning</h4>
@@ -80,7 +103,8 @@ export default function App() {
                   🧴 Add-On Services
                 </h4>
                 <p>
-                  Oven cleaning, fridge cleaning, windows, and more - just ask!
+                  Oven cleaning, fridge cleaning, windows, laundry, emptying
+                  dishwashers and more - just ask!
                 </p>
               </li>
             </ul>
@@ -91,26 +115,23 @@ export default function App() {
       {page === "contact" && (
         <div>
           <ContactForm />
-          <footer className="bg-blue-900 text-white py-6">
-            <div className="max-w-5xl mx-auto text-center">
-              <p className="mb-2">📞 Call or text: (774) 253-5853</p>
-              <p>
-                📧 Email:{" "}
-                <a
-                  href="mailto:davesdustbunnies@gmail.com"
-                  className="underline"
-                >
-                  DavesDustBunnies@gmail.com
-                </a>
-              </p>
-              <p className="mt-4 text-sm text-gray-300">
-                © {new Date().getFullYear()} Dave’s Dust Bunnies. All rights
-                reserved.
-              </p>
-            </div>
-          </footer>
         </div>
       )}
+      <footer className="bg-blue-900 text-white py-6">
+        <div className="max-w-5xl mx-auto text-center">
+          <p className="mb-2">📞 Call or text: (774) 253-5853</p>
+          <p>
+            📧 Email:{" "}
+            <a href="mailto:davesdustbunnies@gmail.com" className="underline">
+              DavesDustBunnies@gmail.com
+            </a>
+          </p>
+          <p className="mt-4 text-sm text-gray-300">
+            © {new Date().getFullYear()} Dave’s Dust Bunnies. All rights
+            reserved.
+          </p>
+        </div>
+      </footer>
     </div>
   );
 }
