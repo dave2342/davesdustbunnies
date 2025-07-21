@@ -20,10 +20,10 @@ export default function ContactForm() {
 
     emailjs
       .sendForm(
-        "service_ch17k2f", // e.g. "service_y8z8rko"
-        "template_chpaqzr", // e.g. "template_contact"
+        "service_ch17k2f",
+        "template_chpaqzr",
         form.current,
-        "XjmQTUQatqb5XPiHK" // e.g. "UzslD3Fxxx"
+        "XjmQTUQatqb5XPiHK"
       )
       .then(
         () => {
@@ -52,7 +52,7 @@ export default function ContactForm() {
         className="w-full border border-gray-300 p-2 rounded"
       />
       <input
-        name="name" // must match {{name}} in your template
+        name="name"
         placeholder="Your Name"
         required
         className="w-full border border-gray-300 p-2 rounded"
@@ -65,7 +65,7 @@ export default function ContactForm() {
         className="w-full border border-gray-300 p-2 rounded"
       />
       <textarea
-        name="message" // must match {{message}} in your template
+        name="message"
         placeholder="Your Message"
         required
         rows={4}

@@ -49,7 +49,6 @@ export default function App() {
         <>
           <Analytics />
 
-          {/* Hero Section */}
           <section className="bg-blue-100 py-20 px-4 text-center">
             <h2 className="text-4xl font-bold mb-4">
               A Cleaner Home, the Easy Way 🧽
@@ -60,7 +59,6 @@ export default function App() {
             </p>
           </section>
 
-          {/* Services */}
           <section className="max-w-4xl mx-auto py-16 px-4">
             <h3 className="text-2xl font-bold mb-6 text-center">What We Do</h3>
             <ul className="grid md:grid-cols-2 gap-6">
