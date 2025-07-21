@@ -19,7 +19,7 @@ export default function App() {
     <div className="min-h-screen bg-white text-gray-800 font-sans">
       {/* Header */}
       <header className="bg-blue-900 text-white p-6 shadow-md">
-        <div className="max-w-5xl mx-auto flex justify-between items-center">
+        <div className="max-w-5xl mx-auto flex flex-col md:flex-row gap-4 md:gap-0 justify-between items-center">
           <div className="flex items-center">
             <img
               src={dustbunny}
@@ -29,7 +29,7 @@ export default function App() {
             />
 
             <h1
-              className="text-5xl font-poppins cursor-pointer transition-colors"
+              className="text-3xl md:text-5xl font-poppins cursor-pointer transition-colors"
               onClick={showHome}
             >
               Dave’s Dust Bunnies
