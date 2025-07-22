@@ -7,6 +7,8 @@ export default {
         pacifico: ["Pacifico", "cursive"],
         poppins: ["Poppins", "sans-serif"],
         fredoka: ["Fredoka", "sans-serif"],
+        twinkle: ["Twinkle Star", "cursive"],
+        sans: ["Nunito", "sans-serif"],
       },
     },
   },

@@ -18,18 +18,17 @@ export default function App() {
   return (
     <div className="min-h-screen bg-white text-gray-800 font-sans">
       {/* Header */}
-      <header className="bg-blue-900 text-white p-6 shadow-md">
+      <header className="bg-sky-700 text-white p-6 shadow-md">
         <div className="max-w-5xl mx-auto flex flex-col md:flex-row gap-4 md:gap-0 justify-between items-center">
           <div className="flex items-center">
             <img
               src={dustbunny}
               alt="Logo Dust Bunny"
-              className="w-24 h-22 cursor-pointer"
+              className="w-26 h-24 pr-3 cursor-pointer"
               onClick={showHome}
             />
-
             <h1
-              className="text-3xl md:text-5xl font-poppins cursor-pointer transition-colors"
+              className="text-3xl md:text-[44px] pt-6 pb-6 font-twinkle cursor-pointer transition-colors"
               onClick={showHome}
             >
               Dave’s Dust Bunnies
@@ -49,7 +48,7 @@ export default function App() {
         <>
           <Analytics />
 
-          <section className="bg-blue-100 py-20 px-4 text-center">
+          <section className="bg-gray-50 py-20 px-4 text-center">
             <h2 className="text-4xl font-bold mb-4">
               A Cleaner Home, the Easy Way 🧽
             </h2>
@@ -62,7 +61,7 @@ export default function App() {
           <section className="max-w-4xl mx-auto py-16 px-4">
             <h3 className="text-2xl font-bold mb-6 text-center">What We Do</h3>
             <ul className="grid md:grid-cols-2 gap-6">
-              <li className="bg-gray-100 p-6 rounded shadow">
+              <li className="bg-sky-50 p-6 rounded-xl shadow">
                 <h4 className="font-semibold text-lg mb-2">
                   🏠 Standard House Cleaning
                 </h4>
@@ -80,14 +79,15 @@ export default function App() {
                   <li>Emptying trash bins</li>
                 </ul>
               </li>
-              <li className="bg-gray-100 p-6 rounded shadow">
+              <li className="bg-sky-50 p-6 rounded-xl shadow">
                 <h4 className="font-semibold text-lg mb-2">🧹 Deep Cleaning</h4>
                 <p>
                   Spring cleaning, move-in/move-out jobs, or a full
                   top-to-bottom reset.
                 </p>
               </li>
-              <li className="bg-gray-100 p-6 rounded shadow">
+
+              <li className="bg-sky-50 p-6 rounded-xl shadow">
                 <h4 className="font-semibold text-lg mb-2">
                   🏢 Small Office Cleaning
                 </h4>
@@ -96,7 +96,7 @@ export default function App() {
                   flexible scheduling.
                 </p>
               </li>
-              <li className="bg-gray-100 p-6 rounded shadow">
+              <li className="bg-sky-50 p-6 rounded-xl shadow">
                 <h4 className="font-semibold text-lg mb-2">
                   🧴 Add-On Services
                 </h4>
@@ -115,7 +115,7 @@ export default function App() {
           <ContactForm />
         </div>
       )}
-      <footer className="bg-blue-900 text-white py-6">
+      <footer className="bg-sky-700 text-white py-6">
         <div className="max-w-5xl mx-auto text-center">
           <p className="mb-2">📞 Call or text: (774) 253-5853</p>
           <p>
