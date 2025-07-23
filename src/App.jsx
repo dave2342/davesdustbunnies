@@ -1,6 +1,5 @@
 import { useState } from "react";
 import "./App.css";
-import { Analytics } from "@vercel/analytics/react";
 import ContactForm from "./components/ContactForm";
 import SlideOutMenu from "./components/SlideOutMenu";
 import dustbunny from "./assets/dustbunny.png";
@@ -30,11 +29,11 @@ export default function App() {
               <img
                 src={dustbunny}
                 alt="Logo Dust Bunny"
-                className="w-12 h-12 sm:w-20 sm:h-20 md:w-28 md:h-24 shrink-0 cursor-pointer"
+                className="w-16 h-14 sm:w-20 sm:h-20 md:w-28 md:h-24 shrink-0 cursor-pointer"
                 onClick={showHome}
               />
               <h1
-                className="text-xl pt-6 pb-6 sm:text-3xl md:text-[44px] font-twinkle whitespace-nowrap overflow-hidden text-ellipsis cursor-pointer my-1"
+                className="text-2xl sm:text-3xl md:text-[48px] font-twinkle whitespace-nowrap cursor-pointer my-1"
                 onClick={showHome}
               >
                 Dave’s Dust Bunnies
@@ -47,7 +46,7 @@ export default function App() {
 
             <button
               onClick={() => toggleMenu()}
-              className="md:hidden bg-white text-blue-900 font-semibold px-3 py-2 rounded hover:bg-blue-100"
+              className="md:hidden bg-white text-blue-900 font-semibold px-2 py-1 rounded hover:bg-blue-100"
             >
               ☰
             </button>
@@ -56,8 +55,6 @@ export default function App() {
 
         {page === "home" && (
           <>
-            <Analytics />
-
             <section className="bg-gray-50 py-20 px-4 text-center">
               <h2 className="text-4xl font-bold mb-4">
                 A Cleaner Home, the Easy Way 🧽

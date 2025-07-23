@@ -23,11 +23,11 @@ export default function SlideOutMenu({ open, toggleMenu }) {
         </div>
 
         <nav className="flex flex-col p-4 space-y-4 text-gray-700">
-          <a href="#contact" onClick={closeMenu}>
-            📞 Contact
+          <a href="#home" onClick={closeMenu}>
+            🏠 Home
           </a>
-          <a href="#services" onClick={closeMenu}>
-            🧼 Services
+          <a href="#contact" onClick={closeMenu}>
+            ✉️ Contact
           </a>
           <a href="#about" onClick={closeMenu}>
             👋 About
@@ -35,9 +35,9 @@ export default function SlideOutMenu({ open, toggleMenu }) {
           <a href="#reviews" onClick={closeMenu}>
             ⭐ Testimonials
           </a>
-          <a href="#book" onClick={closeMenu}>
+          {/* <a href="#book" onClick={closeMenu}>
             🧾 Book Now
-          </a>
+          </a> */}
         </nav>
       </div>
     </>
