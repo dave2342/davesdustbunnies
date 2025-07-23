@@ -24,29 +24,30 @@ export default function App() {
     <>
       <SlideOutMenu open={menuOpen} toggleMenu={setMenuOpen} />
       <div className="min-h-screen bg-white text-gray-800 font-sans">
-        {/* Header */}
-        <header className="bg-sky-700 text-white p-6 shadow-md">
-          <div className="max-w-5xl mx-auto flex flex-col md:flex-row gap-4 md:gap-0 justify-between items-center">
-            <div className="flex items-center">
+        <header className="bg-sky-700 text-white p-4 shadow-md">
+          <div className="max-w-5xl mx-auto flex justify-between items-center">
+            <div className="flex items-center space-x-2 overflow-hidden">
               <img
                 src={dustbunny}
                 alt="Logo Dust Bunny"
-                className="w-26 h-24 pr-3 cursor-pointer"
+                className="w-12 h-12 sm:w-20 sm:h-20 md:w-28 md:h-24 shrink-0 cursor-pointer"
                 onClick={showHome}
               />
               <h1
-                className="text-3xl md:text-[44px] pt-6 pb-6 font-twinkle cursor-pointer transition-colors"
+                className="text-xl pt-6 pb-6 sm:text-3xl md:text-[44px] font-twinkle whitespace-nowrap overflow-hidden text-ellipsis cursor-pointer my-1"
                 onClick={showHome}
               >
                 Dave’s Dust Bunnies
               </h1>
             </div>
-            <DesktopDropdown showContact={showContact} showHome={showHome} />
+
+            <div className="hidden md:block">
+              <DesktopDropdown showContact={showContact} showHome={showHome} />
+            </div>
 
             <button
-              className="md:hidden bg-white text-blue-900 font-semibold px-4 py-2 rounded hover:bg-blue-100"
-              // onClick={showContact}
-              onClick={toggleMenu}
+              onClick={() => toggleMenu()}
+              className="md:hidden bg-white text-blue-900 font-semibold px-3 py-2 rounded hover:bg-blue-100"
             >
               ☰
             </button>
