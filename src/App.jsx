@@ -19,9 +19,19 @@ export default function App() {
     setPage("home");
   }
 
+  function showAbout() {
+    setPage("about");
+  }
+
   return (
     <>
-      <SlideOutMenu open={menuOpen} toggleMenu={setMenuOpen} />
+      <SlideOutMenu
+        open={menuOpen}
+        toggleMenu={setMenuOpen}
+        showContact={showContact}
+        showHome={showHome}
+        showAbout={showAbout}
+      />
       <div className="min-h-screen bg-white text-gray-800 font-sans">
         <header className="bg-sky-700 text-white p-4 shadow-md">
           <div className="max-w-5xl mx-auto flex justify-between items-center">
@@ -41,7 +51,11 @@ export default function App() {
             </div>
 
             <div className="hidden md:block">
-              <DesktopDropdown showContact={showContact} showHome={showHome} />
+              <DesktopDropdown
+                showContact={showContact}
+                showHome={showHome}
+                showAbout={showAbout}
+              />
             </div>
 
             <button
@@ -126,6 +140,9 @@ export default function App() {
             <ContactForm />
           </div>
         )}
+
+        {page === "about" && <div>About Dave</div>}
+
         <footer className="bg-sky-700 text-white py-6">
           <div className="max-w-5xl mx-auto text-center">
             <p className="mb-2">📞 Call or text: (774) 253-5853</p>

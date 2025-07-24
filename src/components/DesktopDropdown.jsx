@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 
-export default function DesktopDropdown({ showContact, showHome }) {
+export default function DesktopDropdown({ showContact, showHome, showAbout }) {
   const [open, setOpen] = useState(false);
   const dropdownRef = useRef(null);
 
@@ -18,40 +18,40 @@ export default function DesktopDropdown({ showContact, showHome }) {
     <div className="relative hidden md:block" ref={dropdownRef}>
       <button
         onClick={() => setOpen(!open)}
-        className="bg-white text-blue-900 font-semibold px-3 py-2 rounded hover:bg-blue-100"
+        className=" bg-white text-blue-900 font-semibold px-3 py-2 rounded hover:bg-blue-100"
       >
         ☰
       </button>
 
       {open && (
-        <div className="absolute text-black right-0 mt-2 w-40 bg-sky-50 rounded shadow-lg z-50">
-          <a
-            href="#home"
-            className="block px-4 py-2 hover:bg-sky-100"
+        <div className="absolute text-black right-0 mt-2 min-w-[100px] max-w-[120px] bg-sky-50 rounded shadow-lg z-50">
+          <button
+            className="w-full block px-4 py-2 hover:bg-sky-100"
             onClick={() => {
               setOpen(false);
               showHome();
             }}
           >
             Home
-          </a>
-          <a
-            href="#contact"
-            className="block px-4 py-2 hover:bg-sky-100"
+          </button>
+          <button
+            className="w-full block px-4 py-2 hover:bg-sky-100"
             onClick={() => {
               setOpen(false);
               showContact();
             }}
           >
             Contact
-          </a>
-          <a
-            href="#about"
-            className="block px-4 py-2 hover:bg-sky-100"
-            onClick={() => setOpen(false)}
+          </button>
+          <button
+            className="w-full block px-4 py-2 hover:bg-sky-100"
+            onClick={() => {
+              setOpen(false);
+              showAbout();
+            }}
           >
             About
-          </a>
+          </button>
         </div>
       )}
     </div>

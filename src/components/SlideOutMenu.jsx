@@ -1,4 +1,10 @@
-export default function SlideOutMenu({ open, toggleMenu }) {
+export default function SlideOutMenu({
+  open,
+  toggleMenu,
+  showHome,
+  showContact,
+  showAbout,
+}) {
   const closeMenu = () => toggleMenu(false);
 
   return (
@@ -11,7 +17,7 @@ export default function SlideOutMenu({ open, toggleMenu }) {
       )}
 
       <div
-        className={`fixed top-0 right-0 h-full w-64 bg-white z-50 shadow-lg transform transition-transform duration-300 ${
+        className={`fixed top-0 right-0 h-full w-64 bg-white max-w-[160px] z-50 shadow-lg transform transition-transform duration-300 ${
           open ? "translate-x-0" : "translate-x-full"
         }`}
       >
@@ -23,15 +29,36 @@ export default function SlideOutMenu({ open, toggleMenu }) {
         </div>
 
         <nav className="flex flex-col p-4 space-y-4 text-gray-700">
-          <a href="#home" onClick={closeMenu}>
+          <button
+            className="w-full block px-2 text-left"
+            onClick={() => {
+              closeMenu();
+              showHome();
+            }}
+          >
             🏠 Home
-          </a>
-          <a href="#contact" onClick={closeMenu}>
+          </button>
+          <button
+            className="w-full block px-2 text-left"
+            onClick={() => {
+              closeMenu();
+              showContact();
+            }}
+          >
             ✉️ Contact
-          </a>
-          <a href="#about" onClick={closeMenu}>
+          </button>
+          <button
+            className="w-full block px-2 text-left"
+            onClick={() => {
+              closeMenu();
+              showAbout();
+            }}
+          >
             👋 About
-          </a>
+          </button>
+          {/* <a href="#about" onClick={closeMenu}>
+            👋 About
+          </a> */}
           <a href="#reviews" onClick={closeMenu}>
             ⭐ Testimonials
           </a>
