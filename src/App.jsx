@@ -69,7 +69,7 @@ export default function App() {
 
         {page === "home" && (
           <>
-            <section className="bg-gray-50 py-20 px-4 text-center">
+            <section className="bg-gray-50 py-10 px-4 text-center">
               <h2 className="text-4xl font-bold mb-4">
                 A Cleaner Home, the Easy Way 🧽
               </h2>
@@ -141,7 +141,34 @@ export default function App() {
           </div>
         )}
 
-        {page === "about" && <div>About Dave</div>}
+        {page === "about" && (
+          <>
+            <section className="bg-gray-50 py-10 px-4 text-center">
+              <h2 className="text-4xl font-bold mb-4">About Dave</h2>
+              <p className="text-lg max-w-xl mx-auto text-left mb-4">
+                In 2020, I decided to establish Dave's Dust Bunnies, with the
+                support of both of my siblings. While I was unsure about doing
+                this solo at the beginning, I've found a passion for detailing
+                homes as best I can, and creating a clean, relaxing environment
+                for my clients!
+              </p>
+
+              <p className="text-lg max-w-xl mx-auto text-left mb-4">
+                Also in 2020, I began my journey at Southern New Hampshire
+                University and majored in computer science. I recently graduated
+                in May 2025. While my long-term goal is to build a career in
+                software development, I absolutely love what I do now: bring
+                peace of mind to people by transforming their spaces.
+              </p>
+
+              <p className="text-lg max-w-xl mx-auto text-left">
+                Whether I'm scrubbing baseboards or writing JavaScript, I'm all
+                about attention to detail, problem-solving, and helping others.
+                Thanks for stopping by!
+              </p>
+            </section>
+          </>
+        )}
 
         <footer className="bg-sky-700 text-white py-6">
           <div className="max-w-5xl mx-auto text-center">
