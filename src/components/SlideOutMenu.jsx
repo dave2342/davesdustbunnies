@@ -56,14 +56,9 @@ export default function SlideOutMenu({
           >
             👋 About
           </button>
-          {/* <a href="#about" onClick={closeMenu}>
-            👋 About
-          </a> */}
-          <a href="#reviews" onClick={closeMenu}>
+
+          {/* <a href="#reviews" onClick={closeMenu}>
             ⭐ Testimonials
-          </a>
-          {/* <a href="#book" onClick={closeMenu}>
-            🧾 Book Now
           </a> */}
         </nav>
       </div>

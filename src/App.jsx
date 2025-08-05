@@ -145,7 +145,7 @@ export default function App() {
           <>
             <section className="bg-gray-50 py-10 px-4 text-center">
               <h2 className="text-4xl font-bold mb-4">About Dave</h2>
-              <p className="text-lg max-w-xl mx-auto text-left mb-4">
+              <p className="text-lg max-w-3xl mx-auto text-left mb-4">
                 In 2020, I decided to establish Dave's Dust Bunnies, with the
                 support of both of my siblings. While I was unsure about doing
                 this solo at the beginning, I've found a passion for detailing
@@ -153,7 +153,7 @@ export default function App() {
                 for my clients!
               </p>
 
-              <p className="text-lg max-w-xl mx-auto text-left mb-4">
+              <p className="text-lg max-w-3xl mx-auto text-left mb-4">
                 Also in 2020, I began my journey at Southern New Hampshire
                 University and majored in computer science. I recently graduated
                 in May 2025. While my long-term goal is to build a career in
@@ -161,7 +161,7 @@ export default function App() {
                 peace of mind to people by transforming their spaces.
               </p>
 
-              <p className="text-lg max-w-xl mx-auto text-left">
+              <p className="text-lg max-w-3xl mx-auto text-left">
                 Whether I'm scrubbing baseboards or writing JavaScript, I'm all
                 about attention to detail, problem-solving, and helping others.
                 Thanks for stopping by!
