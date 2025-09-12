@@ -35,7 +35,7 @@ export default function App() {
       <div className="min-h-screen bg-white text-gray-800 font-sans">
         <header className="bg-sky-700 text-white p-4 shadow-md">
           <div className="max-w-5xl mx-auto flex justify-between items-center">
-            <div className="flex items-center space-x-2 overflow-hidden">
+            <div className="flex items-center overflow-hidden">
               <img
                 src={dustbunny}
                 alt="Logo Dust Bunny"

@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/mysecretapp/(.*)",
+      "destination": "https://drink-generator-nine.vercel.app/"
+    }
+  ]
+}
