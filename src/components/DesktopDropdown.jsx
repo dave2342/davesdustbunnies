@@ -1,6 +1,11 @@
 import { useState, useRef, useEffect } from "react";
 
-export default function DesktopDropdown({ showContact, showHome, showAbout }) {
+export default function DesktopDropdown({
+  showContact,
+  showHome,
+  showAbout,
+  showPortfolio,
+}) {
   const [open, setOpen] = useState(false);
   const dropdownRef = useRef(null);
 
@@ -51,6 +56,15 @@ export default function DesktopDropdown({ showContact, showHome, showAbout }) {
             }}
           >
             About
+          </button>
+          <button
+            className="w-full block px-4 py-2 hover:bg-sky-100"
+            onClick={() => {
+              setOpen(false);
+              showPortfolio();
+            }}
+          >
+            Portfolio
           </button>
         </div>
       )}

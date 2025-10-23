@@ -4,6 +4,7 @@ export default function SlideOutMenu({
   showHome,
   showContact,
   showAbout,
+  showPortfolio,
 }) {
   const closeMenu = () => toggleMenu(false);
 
@@ -55,6 +56,16 @@ export default function SlideOutMenu({
             }}
           >
             👋 About
+          </button>
+
+          <button
+            className="w-full block px-2 text-left"
+            onClick={() => {
+              closeMenu();
+              showPortfolio();
+            }}
+          >
+            Portfolio
           </button>
 
           {/* <a href="#reviews" onClick={closeMenu}>

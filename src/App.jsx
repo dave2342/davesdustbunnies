@@ -4,6 +4,7 @@ import ContactForm from "./components/ContactForm";
 import SlideOutMenu from "./components/SlideOutMenu";
 import dustbunny from "./assets/dustbunny.png";
 import DesktopDropdown from "./components/DesktopDropdown";
+import DrinkApp from "../portfolio/drink-app/src/DrinkApp";
 
 export default function App() {
   const [page, setPage] = useState("home");
@@ -21,6 +22,10 @@ export default function App() {
 
   function showAbout() {
     setPage("about");
+  }
+
+  function showPortfolio() {
+    setPage("portfolio");
   }
 
   return (
@@ -55,6 +60,7 @@ export default function App() {
                 showContact={showContact}
                 showHome={showHome}
                 showAbout={showAbout}
+                showPortfolio={showPortfolio}
               />
             </div>
 
@@ -168,6 +174,40 @@ export default function App() {
               </p>
             </section>
           </>
+        )}
+
+        {page === "portfolio" && (
+          <section className="bg-gray-50 py-10 px-4">
+            <h2 className="text-4xl font-bold mb-10 text-center">
+              My Tech Projects
+            </h2>
+
+            <div className="max-w-6xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {/* Project Card: Drink Generator */}
+              <div className="bg-white rounded-xl shadow hover:shadow-lg transition p-4 flex flex-col">
+                <img
+                  src="/portfolio/drink-app-screenshot.png" // replace with a screenshot
+                  alt="Drink Generator App"
+                  className="rounded-lg mb-4"
+                />
+                <h3 className="text-xl font-semibold mb-2">
+                  Drink Generator App
+                </h3>
+                <p className="text-gray-700 flex-1">
+                  A fun React app that generates random drink recipes based on
+                  selected alcohol. Uses an interactive menu and ingredient
+                  display.
+                </p>
+                <a
+                  href="https://drink-generator-nine.vercel.app/"
+                  target="_blank"
+                  className="mt-4 inline-block text-center bg-sky-700 text-white px-4 py-2 rounded hover:bg-sky-800"
+                >
+                  View Project
+                </a>
+              </div>
+            </div>
+          </section>
         )}
 
         <footer className="bg-sky-700 text-white py-6">
