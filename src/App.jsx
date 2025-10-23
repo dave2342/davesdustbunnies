@@ -4,7 +4,7 @@ import ContactForm from "./components/ContactForm";
 import SlideOutMenu from "./components/SlideOutMenu";
 import dustbunny from "./assets/dustbunny.png";
 import DesktopDropdown from "./components/DesktopDropdown";
-import DrinkApp from "../portfolio/drink-app/src/DrinkApp";
+import drinkAppImage from "./assets/drink-app.png";
 
 export default function App() {
   const [page, setPage] = useState("home");
@@ -178,7 +178,7 @@ export default function App() {
 
         {page === "portfolio" && (
           <section className="bg-gray-50 py-10 px-4">
-            <h2 className="text-4xl font-bold mb-10 text-center">
+            <h2 className="text-3xl font-bold mb-10 text-center">
               My Tech Projects
             </h2>
 
@@ -186,8 +186,8 @@ export default function App() {
               {/* Project Card: Drink Generator */}
               <div className="bg-white rounded-xl shadow hover:shadow-lg transition p-4 flex flex-col">
                 <img
-                  src="/portfolio/drink-app-screenshot.png" // replace with a screenshot
-                  alt="Drink Generator App"
+                  src={drinkAppImage} // replace with a screenshot
+                  alt="Drink Generator App Screenshot"
                   className="rounded-lg mb-4"
                 />
                 <h3 className="text-xl font-semibold mb-2">
